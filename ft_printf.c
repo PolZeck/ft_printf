@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:12:45 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 12:10:57 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 14:13:38 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ int	ft_printf(const char *format, ...)
 // int	main(void)
 // {
 // 	ft_printf(" %p %p ", 0, 0);
-// 	// ft_printf("NULL pointer 2: %p %p\n", 0, 0);
-// 	// ft_printf("Non-NULL pointer: %p\n", (void *)123456);
-// 	// ft_printf("NULL and non-NULL: %p %p\n", NULL, (void *)0xdeadbeef);
+// 	ft_printf("NULL pointer 2: %p %p\n", 0, 0);
+// 	ft_printf("Non-NULL pointer: %p\n", (void *)123456);
+// 	ft_printf("NULL and non-NULL: %p %p\n", NULL, (void *)0xdeadbeef);
 
 // 	printf(" %p %p ", 0, 0);
-// 	// printf("NULL pointer 2: %p %p\n", 0, 0);
-// 	// printf("Non-NULL pointer: %p\n", (void *)123456);
-// 	// printf("NULL and non-NULL: %p %p\n", NULL, (void *)0xdeadbeef);
+// 	printf("NULL pointer 2: %p %p\n", 0, 0);
+// 	printf("Non-NULL pointer: %p\n", (void *)123456);
+// 	printf("NULL and non-NULL: %p %p\n", NULL, (void *)0xdeadbeef);
 
 // 	return (0);
 // }
