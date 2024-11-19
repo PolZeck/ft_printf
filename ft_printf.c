@@ -6,7 +6,37 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:12:45 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/18 15:12:47 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 10:29:01 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int	ft_printf(const char *format, ...)
+{
+	va_list	args;
+	int		count;
+
+	count = 0;
+	va_start(args, format);
+	while (*format)
+	{
+		if (*format == '%' && *(format + 1))
+		{
+			format++;
+			count += ft_parse_format(*format, args);
+		}
+		else
+			count += ft_putchar(*format);
+		format++;
+	}
+	va_end(args);
+	return (count);
+}
+
+// int	main(void)
+// {
+// 	ft_printf("le daron d'abouclie est surement chauve %u\n", -9);
+//  printf("le daron d'abouclie est surement chauve %u", -9);
+// 	return (0);
+// }
