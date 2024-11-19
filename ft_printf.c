@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:12:45 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 14:13:38 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 16:09:56 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
 // int	main(void)
 // {
 // 	ft_printf(" %p %p ", 0, 0);

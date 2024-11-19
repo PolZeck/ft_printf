@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:55:01 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 14:35:44 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 16:11:44 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	*ft_itoa_base(unsigned long num, int base, int uppercase)
 	else
 		digits = "0123456789abcdef";
 	len = ft_baselen(num, base);
-	str =(sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
