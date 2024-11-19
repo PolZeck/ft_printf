@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:11:48 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 09:58:31 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 12:27:35 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	ft_parse_format(char format, va_list args)
 	else if (format == 'p')
 		return (ft_handle_pointer(va_arg(args, void *)));
 	else
-		return (ft_putchar('%') + ft_putchar(format));
+		return (ft_putchar('%'));
 }

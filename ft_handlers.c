@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:11:42 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 10:36:45 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 12:28:28 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_handle_char(char c)
 
 int	ft_handle_string(char *str)
 {
-	if (!str)
-		str = (NULL);
+	if (str == NULL)
+		return (ft_putstr("(null)"));
 	return (ft_putstr(str));
 }
 
@@ -53,10 +53,13 @@ int	ft_handle_pointer(void *ptr)
 	int				len;
 	char			*str;
 
-	addr = 0;
-	str = ft_itoa_base(addr, 16, 0);
-	len = ft_putstr("0x");
+	if (!ptr)
+		return (ft_putstr("(nil)"));
 	addr = (unsigned long)ptr;
+	str = ft_itoa_base(addr, 16, 0);
+	if (!str)
+		return (0);
+	len = ft_putstr("0x");
 	len += ft_putstr(str);
 	free(str);
 	return (len);

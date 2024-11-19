@@ -6,7 +6,7 @@
 /*   By: pledieu <pledieu@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 08:43:13 by pledieu           #+#    #+#             */
-/*   Updated: 2024/11/19 10:09:34 by pledieu          ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 12:07:21 by pledieu          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int	ft_putstr(char *str)
 	int	count;
 
 	count = 0;
-	while (str && *str)
+	if (!str)
+		return (0);
+	while (*str)
 		count += ft_putchar(*str++);
 	return (count);
 }
